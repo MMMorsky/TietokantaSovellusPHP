@@ -9,6 +9,19 @@
 
     public static function sandbox(){
       // Testaa koodiasi täällä
-      echo 'Hello World!';
+      View::make('helloworld.html');
     }
+
+    public static function kurssit() {
+        View::make('kurssit.html');
+    }
+
+
+      public static function muokkaus() {
+          View::make('muokkaus.html');
+      }
+
+      public static function esittely() {
+          View::make('esittely.html');
+      }
   }
