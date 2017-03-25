@@ -13,13 +13,13 @@ CREATE TABLE Kurssi (
   id SERIAL PRIMARY KEY,
   laitos_id INTEGER REFERENCES Laitos(id),
   nimi VARCHAR(50) NOT NULL,
-  aloituspaiva DATE NOT NULL
+  aloituspaiva DATE
 );
 
 
 CREATE TABLE Kurssinvastuu (
-  kurssi_id INTEGER REFERENCES Kurssi(id),
-  vastuuhenkilo_id INTEGER REFERENCES Vastuuhenkilo(id)
+  vastuuhenkilo_id INTEGER REFERENCES Vastuuhenkilo(id) ON UPDATE CASCADE ON DELETE CASCADE,
+  kurssi_id INTEGER REFERENCES Kurssi(id) ON UPDATE CASCADE
 );
 
 CREATE TABLE Kysely (
