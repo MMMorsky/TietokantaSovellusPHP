@@ -32,7 +32,7 @@ class Kurssi extends BaseModel {
         $row = $query->fetch();
 
         if($row){
-            $kurssi = new Game(array(
+            $kurssi = new Kurssi(array(
                 'id' => $row['id'],
                 'laitos_id' => $row['laitos_id'],
                 'nimi' => $row['nimi'],
