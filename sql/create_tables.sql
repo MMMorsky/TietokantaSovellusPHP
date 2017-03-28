@@ -13,7 +13,7 @@ CREATE TABLE Kurssi (
   id SERIAL PRIMARY KEY,
   laitos_id INTEGER REFERENCES Laitos(id),
   nimi VARCHAR(50) NOT NULL,
-  aloituspaiva DATE
+  aloituspaiva VARCHAR(50)
 );
 
 

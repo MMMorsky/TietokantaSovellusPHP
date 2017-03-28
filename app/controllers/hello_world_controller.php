@@ -13,7 +13,7 @@ class HelloWorldController extends BaseController
     public static function sandbox()
     {
         // Testaa koodiasi täällä
-        $tikape = Kurssi::find(1);
+        $tikape = Kurssi::all();
 
         Kint::dump($tikape);
     }

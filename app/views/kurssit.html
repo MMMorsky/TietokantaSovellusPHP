@@ -7,19 +7,21 @@
     <thead>
     <tr>
         <th>Kurssi</th>
-        <th>Tiedekunta</th>
+        <th>Laitos</th>
         <th>Päivämäärä</th>
-        <th>Luennoitsija</th>
+        <th>Vastuuhenkilö</th>
     </tr>
     </thead>
 
     <tbody>
-    <tr>
-        <td><a href="#">Tietokantojen Perusteet</a></td>
-        <td>Tietojenkäsittelytiede</td>
-        <td>1.9.2017</td>
-        <td>Mikko Mallikas</td>
-    </tr>
+    {% for kurssi in kurssit %}
+        <tr>
+            <td>{{kurssi.nimi}}</td>
+            <td>{{kurssi.laitos}}</td>
+            <td>{{kurssi.aloituspaiva}}</td>
+            <td>{{kurssi.vastuuhenkilo}}</td>
+        </tr>
+    {% endfor %}
     </tbody>
 </table>
 {% endblock %}

@@ -5,7 +5,11 @@ $routes->get('/', function () {
 });
 
 $routes->get('/kurssit', function () {
-    HelloWorldController::kurssit();
+    KurssiController::index();
+});
+
+$routes->get('/kurssit/:id', function ($id) {
+    KurssiController::esittely($id);
 });
 
 $routes->get('/esittely', function () {
