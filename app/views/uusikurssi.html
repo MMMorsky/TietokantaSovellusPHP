@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Lisää Kurssi järjestelmään</h1>
+
+<form method="post" action="{{base_path}}/esittely">
+    <div class="form-group">
+        <label>Nimi</label>
+        <input type="text" name="nimi" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Aloituspäivä</label>
+        <input type="text" name="aloituspaiva" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Vapaavalintainen kysymys 1</label>
+        <input type="text" name="kysymys5" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Vapaavalintainen kysymys 2</label>
+        <textarea name="kysymys6" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Lisää</button>
+    </div>
+</form>
+{% endblock %}

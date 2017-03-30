@@ -14,7 +14,9 @@ class HelloWorldController extends BaseController
     {
         // Testaa koodiasi täällä
         $tikape = Kurssi::all();
+        $kurssit = Kurssi::find(1);
 
+        Kint::dump($kurssit);
         Kint::dump($tikape);
     }
 

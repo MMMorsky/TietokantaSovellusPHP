@@ -7,7 +7,6 @@
     <thead>
     <tr>
         <th>Kurssi</th>
-        <th>Laitos</th>
         <th>Päivämäärä</th>
         <th>Vastuuhenkilö</th>
     </tr>
@@ -17,7 +16,6 @@
     {% for kurssi in kurssit %}
         <tr>
             <td>{{kurssi.nimi}}</td>
-            <td>{{kurssi.laitos}}</td>
             <td>{{kurssi.aloituspaiva}}</td>
             <td>{{kurssi.vastuuhenkilo}}</td>
         </tr>

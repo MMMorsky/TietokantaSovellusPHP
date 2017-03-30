@@ -23,3 +23,11 @@ $routes->get('/muokkaus', function () {
 $routes->get('/hiekkalaatikko', function () {
     HelloWorldController::sandbox();
 });
+
+$routes->get('/uusikurssi', function(){
+    KurssiController::luonti();
+});
+
+$routes->post('/esittely', function(){
+    KurssiController::tallennus();
+});
