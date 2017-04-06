@@ -41,6 +41,11 @@
             <!-- Navigaation linkit -->
             <li><a href="{{base_path}}/kurssit">Kurssit</a></li>
             <li><a href="{{base_path}}/uusikurssi">Luo kurssi</a></li>
+            <li><a href="{{base_path}}/kirjaudu">Kirjaudu</a></li>
+            {% if user_logged_in %}
+            <li><a>Kirjauduttu</a></li>
+            {% endif %}
+
           </ul>
         </div>
       </div>

@@ -13,11 +13,14 @@ class HelloWorldController extends BaseController
     public static function sandbox()
     {
         // Testaa koodiasi täällä
-        $tikape = Kurssi::all();
-        $kurssit = Kurssi::find(1);
+        $kurssi = new Kurssi(array(
+           'nimi' => 'ab',
+            'aloituspaiva' => ''
+        ));
 
-        Kint::dump($kurssit);
-        Kint::dump($tikape);
+        $errors = $kurssi->errors();
+
+        Kint::dump($errors);
     }
 
     public static function kurssit()

@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+
+<div>
+    {{message}}
+</div>
+
 <h1>Arvosteltavat kurssit</h1>
 
 
@@ -15,7 +20,7 @@
     <tbody>
     {% for kurssi in kurssit %}
         <tr>
-            <td>{{kurssi.nimi}}</td>
+            <td><a href="{{base_path}}/kurssit/{{kurssi.id}}">{{kurssi.nimi}}</a></td>
             <td>{{kurssi.aloituspaiva}}</td>
             <td>{{kurssi.vastuuhenkilo}}</td>
         </tr>

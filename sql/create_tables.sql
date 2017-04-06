@@ -18,6 +18,12 @@ CREATE TABLE Kurssinvastuu (
   kurssi_id INTEGER REFERENCES Kurssi(id) ON UPDATE CASCADE
 );
 
+CREATE TABLE Kayttaja (
+  id SERIAL PRIMARY KEY,
+  kayttajanimi VARCHAR(50),
+  salasana VARCHAR(50)
+);
+
 
 CREATE TABLE Vastaus (
   id SERIAL PRIMARY KEY,

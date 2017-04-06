@@ -31,3 +31,23 @@ $routes->get('/uusikurssi', function(){
 $routes->post('/esittely', function(){
     KurssiController::tallennus();
 });
+
+$routes->get('/kurssit/:id/edit', function ($id) {
+    KurssiController::muokkaus($id);
+});
+
+$routes->post('/kurssit/:id/edit', function ($id)  {
+    KurssiController::paivitys($id);
+});
+
+$routes->post('/kurssit/:id/tuhoa', function ($id) {
+    KurssiController::tuhoa($id);
+});
+
+$routes->get('/kirjaudu', function () {
+    KayttajaController::login();
+});
+
+$routes->post('/kirjaudu', function () {
+   KayttajaController::kasittele_kirjautuminen();
+});
