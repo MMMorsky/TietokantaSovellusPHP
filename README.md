@@ -8,8 +8,8 @@ Yleisiä linkkejä:
 * [Linkki esittelysivulle](http://xmox.users.cs.helsinki.fi/tsoha/esittely)
 * [Linkki dokumentaatiooni](https://github.com/MMMorsky/Tsoha-Bootstrap/blob/master/doc/dokumentaatio.pdf)
 
-## Käyttäjätunnus: timo
-## Salasana: raipe
+ Käyttäjätunnus: timo
+ Salasana: raipe
 
 ## Työn aihe
 
