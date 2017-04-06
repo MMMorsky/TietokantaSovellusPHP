@@ -9,6 +9,7 @@ Yleisiä linkkejä:
 * [Linkki dokumentaatiooni](https://github.com/MMMorsky/Tsoha-Bootstrap/blob/master/doc/dokumentaatio.pdf)
 
  Käyttäjätunnus: timo
+ 
  Salasana: raipe
 
 ## Työn aihe
