@@ -8,6 +8,7 @@ class KurssiController extends BaseController {
     }
 
     public static function esittely($id) {
+        self::check_logged_in();
         $kurssi = Kurssi::find($id);
 
         View::make('esittely.html', array('kurssi' => $kurssi));
@@ -15,6 +16,7 @@ class KurssiController extends BaseController {
     }
 
     public static function luonti() {
+        self::check_logged_in();
         View::make('uusikurssi.html');
 
     }
@@ -40,6 +42,7 @@ class KurssiController extends BaseController {
     }
 
     public static function muokkaus($id) {
+        self::check_logged_in();
         $kurssi = Kurssi::find($id);
         View::make('muokkaus.html', array('attributes' => $kurssi));
     }
@@ -68,6 +71,7 @@ class KurssiController extends BaseController {
     }
 
     public static function tuhoa($id) {
+        self::check_logged_in();
         $kurssi = new Kurssi(array('id' => $id));
 
         $kurssi->tuhoa($id);

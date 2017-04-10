@@ -51,3 +51,7 @@ $routes->get('/kirjaudu', function () {
 $routes->post('/kirjaudu', function () {
    KayttajaController::kasittele_kirjautuminen();
 });
+
+$routes->get('/arvostelu/:id', function ($id) {
+    ArvosteluController::arvostelu($id);
+});
