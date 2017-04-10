@@ -55,3 +55,11 @@ $routes->post('/kirjaudu', function () {
 $routes->get('/arvostelu/:id', function ($id) {
     ArvosteluController::arvostelu($id);
 });
+
+$routes->post('/arvostelu/:id', function ($id) {
+    ArvosteluController::tallennus($id);
+});
+
+$routes->post('/kirjauduulos', function(){
+    KayttajaController::kirjauduulos();
+});

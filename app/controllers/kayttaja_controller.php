@@ -5,6 +5,11 @@ class KayttajaController extends BaseController {
         View::make('kirjaudu.html');
     }
 
+    public static function kirjauduulos(){
+        $_SESSION['kayttaja'] = null;
+        Redirect::to('/', array('message' => 'Olet kirjautunut ulos!'));
+    }
+
     public static function kasittele_kirjautuminen() {
         $params = $_POST;
 

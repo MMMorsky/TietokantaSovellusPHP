@@ -7,8 +7,9 @@ class ArvosteluController extends BaseController {
         View::make('arvostelu.html', array('kurssi' => $kurssi));
     }
 
-    public static function tallennus(){
+    public static function tallennus($id){
         $params = $_POST;
+
         $attributes = new Arvostelu(array(
             'vastaus1' => $params['vastaus1'],
             'vastaus2' => $params['vastaus2'],
@@ -20,7 +21,7 @@ class ArvosteluController extends BaseController {
 
 
         $arvostelu = new Arvostelu($attributes);
-        $arvostelu->tallenna(iiik);
+        $arvostelu->tallenna($id);
         Redirect::to('/', array('message' => 'Arvostelu lisätty onnistuneesti!'));
 
 
