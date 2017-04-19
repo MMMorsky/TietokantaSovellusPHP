@@ -11,7 +11,31 @@
     <li><strong>Vapaa valintainen kysymys1:</strong> {{kurssi.kysymys5}}</li>
     <li><strong>Vapaa valintainen kysymys2:</strong> {{kurssi.kysymys6}}</li>
 </ul>
+    <script type="text/javascript">
 
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title:{
+                    text: "Koitko kurssin vaikeaksi?"
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: [
+                            { label: "1",  y: 3.3333333333 },
+                            { label: "2",  y: 3  },
+                            { label: "3",  y: 3  },
+                            { label: "4",  y: 3  },
+                            { label: "5",  y: 3  }
+                        ]
+                    }
+                ]
+            });
+            chart.render();
+        }
+    </script>
+
+<div id="chartContainer" style="height: 200px; width: 60%;"></div>
 <p>
 <form method="post" action="{{base_path}}/kurssit/{{kurssi.id}}/tuhoa" style="display: inline-block">
     <button class="btn btn-danger">Poista</button>

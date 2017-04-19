@@ -9,4 +9,5 @@ class Arvostelu extends BaseModel {
         $query->execute(array('id' => $id, 'vastaus1' => $this->vastaus1, 'vastaus2' => $this->vastaus2, 'vastaus3' => $this->vastaus3, 'vastaus4' => $this->vastaus4, 'vastaus5' => $this->vastaus5, 'vastaus6' => $this->vastaus6));
     }
 
+
 }
