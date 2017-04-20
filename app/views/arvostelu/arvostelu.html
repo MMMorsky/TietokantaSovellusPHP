@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+
+{% if error %}
+<div class="alert alert-danger">
+    {{error}}
+</div>
+{% endif %}
+
 <h1>{{kurssi.nimi}}</h1>
 
 <form method="post" action="{{base_path}}/arvostelu/{{kurssi.id}}">

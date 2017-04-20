@@ -4,12 +4,14 @@ class KurssiController extends BaseController {
     public static function index() {
         $kurssit = Kurssi::all();
 
+
         View::make('kurssit.html', array('kurssit' => $kurssit));
     }
 
     public static function esittely($id) {
         self::check_logged_in();
         $kurssi = Kurssi::find($id);
+
 
         View::make('esittely.html', array('kurssi' => $kurssi));
 
