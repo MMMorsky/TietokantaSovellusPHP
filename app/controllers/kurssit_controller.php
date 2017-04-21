@@ -13,6 +13,9 @@ class KurssiController extends BaseController {
         $kurssi = Kurssi::find($id);
 
 
+
+
+
         View::make('esittely.html', array('kurssi' => $kurssi));
 
     }

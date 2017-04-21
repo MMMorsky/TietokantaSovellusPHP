@@ -16,21 +16,21 @@ class Arvostelu extends BaseModel {
     }
 
 
-    public function annavastaukset($id) //kesken
+    public static function annavastaukset($id) //kesken
     {
-        $query = DB::connection()->prepare('SELECT COUNT(vastaus1) AS arvot FROM Vastaus WHERE kurssi_id = :id GROUP BY Vastaus1;');
+        $query = DB::connection()->prepare('SELECT COUNT(vastaus1) AS vastaus1 FROM Vastaus WHERE kurssi_id = :id GROUP BY Vastaus1');
         $query->execute(array('id' => $id));
         $rows = $query->fetchAll();
-        $arvostelut = array();
+
+        $vastaukset = array();
+
 
         foreach ($rows as $row) {
-            $arvostelut[] = new Arvostelu(array(
-                'vastaus1' => $row['vastaus1'],
-                'vastaus2' => $row['vastaus2'],
-                'Vastaus3' => $row['vastaus3'],
-                'vastaus4' => $row['vastaus4'],
-            ));
+            $vastaukset[] = $row['vastaus1'];
         }
+
+
+
 
         return $arvostelut;
     }
