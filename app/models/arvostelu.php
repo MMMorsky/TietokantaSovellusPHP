@@ -16,23 +16,57 @@ class Arvostelu extends BaseModel {
     }
 
 
-    public static function annavastaukset($id) //kesken
+    public static function annavastaukset($id, $kysymys) //kesken
     {
-        $query = DB::connection()->prepare('SELECT COUNT(vastaus1) AS vastaus1 FROM Vastaus WHERE kurssi_id = :id GROUP BY Vastaus1');
+
+        if ($kysymys == 1) {
+            $query = DB::connection()->prepare('SELECT Vastaus1 AS arvo, COUNT(vastaus1) AS vastaus FROM Vastaus WHERE kurssi_id = :id GROUP BY Vastaus1');
+        } elseif ($kysymys == 2) {
+            $query = DB::connection()->prepare('SELECT Vastaus2 AS arvo, COUNT(vastaus2) AS vastaus FROM Vastaus WHERE kurssi_id = :id GROUP BY Vastaus2');
+        } elseif ($kysymys == 3) {
+            $query = DB::connection()->prepare('SELECT Vastaus3 AS arvo, COUNT(vastaus3) AS vastaus FROM Vastaus WHERE kurssi_id = :id GROUP BY Vastaus3');
+        } else {
+            $query = DB::connection()->prepare('SELECT Vastaus4 AS arvo, COUNT(vastaus4) AS vastaus FROM Vastaus WHERE kurssi_id = :id GROUP BY Vastaus4');
+        }
+
         $query->execute(array('id' => $id));
         $rows = $query->fetchAll();
 
-        $vastaukset = array();
+        $vastaukset = array(
+            'vastaus1' => 0,
+            'vastaus2' => 0,
+            'vastaus3' => 0,
+            'vastaus4' => 0,
+            'vastaus5' => 0
+        );
 
 
         foreach ($rows as $row) {
-            $vastaukset[] = $row['vastaus1'];
+            if ($row['arvo'] == 1) {
+                $vastaukset['vastaus1'] = $row['vastaus'];
+            } elseif ($row['arvo'] == 2) {
+                $vastaukset['vastaus2'] = $row['vastaus'];
+            } elseif ($row['arvo'] == 3) {
+                $vastaukset['vastaus3'] = $row['vastaus'];
+            } elseif ($row['arvo'] == 4) {
+                $vastaukset['vastaus4'] = $row['vastaus'];
+            } else {
+                $vastaukset['vastaus5'] = $row['vastaus'];
+            }
+
+            //$vastaukset[] = $row['vastaus'];
         }
 
+        $arvostelu = new Arvostelu(array(
+            'vastaus1' => $vastaukset['vastaus1'],
+            'vastaus2' => $vastaukset['vastaus2'],
+            'vastaus3' => $vastaukset['vastaus3'],
+            'vastaus4' => $vastaukset['vastaus4'],
+            'vastaus5' => $vastaukset['vastaus5'],
+        ));
 
 
-
-        return $arvostelut;
+        return $arvostelu;
     }
 
 }

@@ -12,11 +12,14 @@ class KurssiController extends BaseController {
         self::check_logged_in();
         $kurssi = Kurssi::find($id);
 
+        $arvostelu = Arvostelu::annavastaukset($id, 1);
+        $arvostelu2 = Arvostelu::annavastaukset($id, 2);
+        $arvostelu3 = Arvostelu::annavastaukset($id, 1);
+        $arvostelu4 = Arvostelu::annavastaukset($id, 1);
 
 
 
-
-        View::make('esittely.html', array('kurssi' => $kurssi));
+        View::make('/kurssit/esittely.html', array('kurssi' => $kurssi, 'arvostelu' => $arvostelu, 'arvostelu2' => $arvostelu2, 'arvostelu3' => $arvostelu3, 'arvostelu4' => $arvostelu4));
 
     }
 

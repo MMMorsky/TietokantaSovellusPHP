@@ -3,9 +3,8 @@
 <div>
     {{message}}
 </div>
-<h1>{{arvostelu.vastaus1}}</h1>
+<h2>{{kurssi.nimi}}</h2>
 
-<h1>{{kurssi.nimi}}</h1>
 
 <ul>
     <li><strong>Päivämäärä: </strong> {{kurssi.aloituspaiva}}</li>
@@ -16,7 +15,7 @@
     <script type="text/javascript">
 
         window.onload = function () {
-            var chart = new CanvasJS.Chart("chartContainer", {
+            var kaavio1 = new CanvasJS.Chart("vastaus1", {
                 title:{
                     text: "Koitko kurssin vaikeaksi?"
                 },
@@ -24,20 +23,87 @@
                     {
                         type: "column",
                         dataPoints: [
-                            { label: "1",  y: 3.3333333333 },
-                            { label: "2",  y: 3  },
-                            { label: "3",  y: 3  },
-                            { label: "4",  y: 3  },
-                            { label: "5",  y: 3  }
+                            { label: "1",  y: {{arvostelu.vastaus1}} },
+                            { label: "2",  y: {{arvostelu.vastaus2}}  },
+                            { label: "3",  y: {{arvostelu.vastaus3}}  },
+                            { label: "4",  y: {{arvostelu.vastaus4}}  },
+                            { label: "5",  y: {{arvostelu.vastaus5}}  }
                         ]
                     }
                 ]
             });
-            chart.render();
+
+            var kaavio2 = new CanvasJS.Chart("vastaus2", {
+                title:{
+                    text: "Oliko kurssin opetus mielestäsi tasokasta?"
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: [
+                            { label: "1",  y: {{arvostelu2.vastaus1}} },
+                            { label: "2",  y: {{arvostelu2.vastaus2}}  },
+                            { label: "3",  y: {{arvostelu2.vastaus3}}  },
+                            { label: "4",  y: {{arvostelu2.vastaus4}}  },
+                            { label: "5",  y: {{arvostelu2.vastaus5}}  }
+                        ]
+                    }
+                ]
+            });
+
+            var kaavio3 = new CanvasJS.Chart("vastaus3", {
+                title:{
+                    text: "Oliko kurssi mielestäsi haastava?"
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: [
+                            { label: "1",  y: {{arvostelu3.vastaus1}} },
+                            { label: "2",  y: {{arvostelu3.vastaus2}}  },
+                            { label: "3",  y: {{arvostelu3.vastaus3}}  },
+                            { label: "4",  y: {{arvostelu3.vastaus4}}  },
+                            { label: "5",  y: {{arvostelu3.vastaus5}}  }
+                            ]
+                        }
+                            ]
+                        });
+
+            var kaavio4 = new CanvasJS.Chart("vastaus4", {
+                title:{
+                    text: "Kurssin yleisarvosana"
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: [
+                            { label: "1",  y: {{arvostelu4.vastaus1}} },
+                            { label: "2",  y: {{arvostelu4.vastaus2}}  },
+                            { label: "3",  y: {{arvostelu4.vastaus3}}  },
+                            { label: "4",  y: {{arvostelu4.vastaus4}}  },
+                            { label: "5",  y: {{arvostelu4.vastaus5}}  }
+                            ]
+                        }
+                            ]
+                        });
+
+            kaavio1.render();
+            kaavio2.render();
+            kaavio3.render();
+            kaavio4.render();
         }
     </script>
 
-<div id="chartContainer" style="height: 200px; width: 60%;"></div>
+<div class="row">
+    <div class="col-lg-1" id="vastaus1" style="height: 200px; width: 30%;"></div>
+    <div class="col-lg-1" id="vastaus2" style="height: 200px; width: 30%;"></div>
+</div>
+<div class="row">
+    <div class="col-lg-1" id="vastaus3" style="height: 200px; width: 30%;"></div>
+    <div class="col-lg-1" id="vastaus4" style="height: 200px; width: 30%;"></div>
+</div>
+
+
 <p>
 <form method="post" action="{{base_path}}/kurssit/{{kurssi.id}}/tuhoa" style="display: inline-block">
     <button class="btn btn-danger">Poista</button>
