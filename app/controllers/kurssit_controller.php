@@ -14,8 +14,8 @@ class KurssiController extends BaseController {
 
         $arvostelu = Arvostelu::annavastaukset($id, 1);
         $arvostelu2 = Arvostelu::annavastaukset($id, 2);
-        $arvostelu3 = Arvostelu::annavastaukset($id, 1);
-        $arvostelu4 = Arvostelu::annavastaukset($id, 1);
+        $arvostelu3 = Arvostelu::annavastaukset($id, 3);
+        $arvostelu4 = Arvostelu::annavastaukset($id, 4);
 
 
 
