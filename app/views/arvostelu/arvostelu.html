@@ -54,17 +54,29 @@
             <label class="radio-inline"> <input type="radio" name="vastaus4" value="5">5</label>
         </ul>
     </div>
+
     <ul>
+
+        {% if kurssi.kysymys5 %}
         <div class="form-group">
             <label>{{kurssi.kysymys5}}</label>
+
             <input type="text" name="vastaus5" class="form-control" value="{{attributes.vastaus6}}">
         </div>
+        {% else %}
+         <input type="text" name="vastaus5" class="hidden" value="{{attributes.vastaus6}}">
+        {% endif %}
 
+        {% if kurssi.kysymys6 %}
         <div class="form-group">
             <label>{{kurssi.kysymys6}}</label>
+
             <input type="text" name="vastaus6" class="form-control" value="{{attributes.vastaus7}}">
         </div>
+        {% else %}
+        <input type="text" name="vastaus6" class="hidden" value="{{attributes.vastaus7}}">
 
+        {% endif %}
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Lähetä</button>

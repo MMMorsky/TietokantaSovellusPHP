@@ -6,7 +6,7 @@ class ArvosteluController extends BaseController
     public function arvostelu($id)
     {
         $kurssi = Kurssi::find($id);
-        View::make('arvostelu.html', array('kurssi' => $kurssi));
+        View::make('/arvostelu/arvostelu.html', array('kurssi' => $kurssi));
     }
 
 

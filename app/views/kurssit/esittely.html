@@ -6,12 +6,10 @@
 <h2>{{kurssi.nimi}}</h2>
 
 
-<ul>
-    <li><strong>Päivämäärä: </strong> {{kurssi.aloituspaiva}}</li>
-    <li><strong>Vastuuhenkilö:</strong> {{kurssi.vastuuhenkilo}}</li>
-    <li><strong>Vapaa valintainen kysymys1:</strong> {{kurssi.kysymys5}}</li>
-    <li><strong>Vapaa valintainen kysymys2:</strong> {{kurssi.kysymys6}}</li>
-</ul>
+
+    <h5><strong>Päivämäärä: </strong> {{kurssi.aloituspaiva}}</h5>
+
+
     <script type="text/javascript">
 
         window.onload = function () {
@@ -94,6 +92,7 @@
         }
     </script>
 
+
 <div class="row">
     <div class="col-lg-1" id="vastaus1" style="height: 200px; width: 30%;"></div>
     <div class="col-lg-1" id="vastaus2" style="height: 200px; width: 30%;"></div>
@@ -103,6 +102,24 @@
     <div class="col-lg-1" id="vastaus4" style="height: 200px; width: 30%;"></div>
 </div>
 
+
+<h3>{{kurssi.kysymys5}}</h3>
+<div class="list-group">
+{% for arvostelu in arvostelu5 %}
+<a class="list-group-item">
+    <p> {{arvostelu.vastaus5}}</p>
+</a>
+{% endfor %}
+</div>
+
+<h3>{{kurssi.kysymys6}}</h3>
+<div class="list-group">
+    {% for arvostelu in arvostelu6 %}
+    <a class="list-group-item">
+        <p> {{arvostelu.vastaus5}}</p>
+    </a>
+    {% endfor %}
+</div>
 
 <p>
 <form method="post" action="{{base_path}}/kurssit/{{kurssi.id}}/tuhoa" style="display: inline-block">

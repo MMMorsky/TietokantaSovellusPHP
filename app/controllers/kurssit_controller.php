@@ -12,14 +12,20 @@ class KurssiController extends BaseController {
         self::check_logged_in();
         $kurssi = Kurssi::find($id);
 
-        $arvostelu = Arvostelu::annavastaukset($id, 1);
-        $arvostelu2 = Arvostelu::annavastaukset($id, 2);
-        $arvostelu3 = Arvostelu::annavastaukset($id, 3);
-        $arvostelu4 = Arvostelu::annavastaukset($id, 4);
+        $arvostelu = Arvostelu::annanumerovastaukset($id, 1);
+        $arvostelu2 = Arvostelu::annanumerovastaukset($id, 2);
+        $arvostelu3 = Arvostelu::annanumerovastaukset($id, 3);
+        $arvostelu4 = Arvostelu::annanumerovastaukset($id, 4);
+
+        $arvostelu5 = Arvostelu::annatekstivastaukset($id, 5);
+        $arvostelu6 = Arvostelu::annatekstivastaukset($id, 6);
 
 
 
-        View::make('/kurssit/esittely.html', array('kurssi' => $kurssi, 'arvostelu' => $arvostelu, 'arvostelu2' => $arvostelu2, 'arvostelu3' => $arvostelu3, 'arvostelu4' => $arvostelu4));
+        View::make('/kurssit/esittely.html', array('kurssi' => $kurssi,
+            'arvostelu' => $arvostelu, 'arvostelu2' => $arvostelu2,
+            'arvostelu3' => $arvostelu3, 'arvostelu4' => $arvostelu4,
+            'arvostelu5' => $arvostelu5, 'arvostelu6' => $arvostelu6));
 
     }
 

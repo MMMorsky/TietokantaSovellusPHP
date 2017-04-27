@@ -16,7 +16,7 @@ class Arvostelu extends BaseModel {
     }
 
 
-    public static function annavastaukset($id, $kysymys) //kesken
+    public static function annanumerovastaukset($id, $kysymys) //kesken
     {
 
         if ($kysymys == 1) {
@@ -67,6 +67,34 @@ class Arvostelu extends BaseModel {
 
 
         return $arvostelu;
+    }
+
+    public static function annatekstivastaukset($id, $kysymys) {
+        if ($kysymys == 5) {
+            $query = DB::connection()->prepare('SELECT vastaus5 AS vastaus FROM Vastaus WHERE kurssi_id = :id');
+        } else {
+            $query = DB::connection()->prepare('SELECT vastaus6 AS vastaus FROM Vastaus WHERE kurssi_id = :id');
+        }
+
+        $query->execute(array('id' => $id));
+        $rows = $query->fetchAll();
+
+        $vastaukset = array();
+
+        foreach ($rows as $row) {
+
+            if ($row['vastaus'] != null) {
+                $vastaukset[] = new Arvostelu(array(
+                    'vastaus5' => $row['vastaus'],
+                ));
+            }
+
+        }
+
+        return $vastaukset;
+
+
+
     }
 
 }
