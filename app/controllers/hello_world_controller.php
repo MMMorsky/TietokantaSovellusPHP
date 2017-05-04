@@ -14,7 +14,7 @@ class HelloWorldController extends BaseController
     {
         // Testaa koodiasi täällä
         $kurssi = new Kurssi(array(
-           'nimi' => 'ab',
+            'nimi' => 'ab',
             'aloituspaiva' => ''
         ));
 

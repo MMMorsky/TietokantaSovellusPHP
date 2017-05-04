@@ -33,20 +33,52 @@
         <label>Vapaavalintainen kysymys 2</label>
         <input type="text" name="kysymys6" class="form-control" value="{{attributes.kysymys6}}">
     </div>
-
-    <div class="form-group">
-        <label>Vastuuhenkilö</label>
-        <select class="form-control" name="kayttajat[]" multiple="">
-            {% for kayttaja in kayttajat %}
-            <option value="{{category.id}}">{{kayttaja.oikeanimi}}</option>
-            {% endfor %}
-        </select>
-    </div>
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Muokkaa</button>
-    </div>
-
-
 </form>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Voimassa olevat vastuut</th>
+        <th></th>
+
+    </tr>
+
+    {% for kayttaja in vastuut %}
+    <tr>
+        <td>{{kayttaja.oikeanimi}}</td>
+        <td>
+            <form method="get" action="{{base_path}}/vastuut/{{kayttaja.id}}/{{attributes.id}}/poista"
+                  style="display: inline-block">
+                <button class="btn btn-danger">Poista</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Lisättävät vastuuhenkilöt</th>
+        <th></th>
+    </tr>
+
+    {% for kayttaja in kayttajat %}
+    <tr>
+        <td>{{kayttaja.oikeanimi}}</td>
+        <td>
+            <form method="get" action="{{base_path}}/vastuut/{{kayttaja.id}}/{{attributes.id}}/lisaa"
+                  style="display: inline-block">
+                <button class="btn btn-primary">Lisää</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<div class="form-group">
+    <button type="submit" class="btn btn-primary">Muokkaa</button>
+</div>
+
+
 {% endblock %}

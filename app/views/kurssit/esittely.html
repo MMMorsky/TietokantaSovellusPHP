@@ -6,9 +6,16 @@
 <h2>{{kurssi.nimi}}</h2>
 <h4>Kurssin vastuuhenkilöt</h4>
 <tr>
-{% for kayttaja in vastuut %}
-    <td>{{kayttaja.oikeanimi}}</td>
-{% endfor %}
+
+
+
+<div class="list-group">
+    {% for kayttaja in vastuut %}
+    <a class="list-group-item">
+        <p> {{kayttaja.oikeanimi}}</p>
+    </a>
+    {% endfor %}
+</div>
 </tr>
 
 

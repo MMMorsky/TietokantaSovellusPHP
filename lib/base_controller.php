@@ -24,4 +24,19 @@
         }
     }
 
+      public static function get_check_permission($id){
+        if(isset($_SESSION['kayttaja'])) {
+            $kayttaja_id = $_SESSION['kayttaja'];
+
+            $kayttaja = Kayttaja::etsiOikeus($kayttaja_id, $id);
+
+            if ($kayttaja) {
+                return $kayttaja;
+            }
+            
+            return null;
+        }
+
+      }
   }
+

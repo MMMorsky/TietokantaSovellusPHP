@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if message %}
+<div class="alert alert-success">
+    {{message}}
+</div>
+{% endif %}
+<div class="jumbotron">
+    <h3>
+        Kurssiarvostelu. Täällä voit arvostella käymäsi kurssin.
+    </h3>
+    <h4>
+        Testikäyttäjän tunnus: timo
+    </h4>
+    <h4>
+        salasana: raipe
+    </h4>
+</div>
+
+{% endblock %}
+
+

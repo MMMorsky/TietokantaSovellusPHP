@@ -5,16 +5,15 @@ class Kurssi extends BaseModel
 
     public $id, $nimi, $aloituspaiva, $vastuuhenkilo, $kysymys5, $kysymys6;
 
-    public function __construct($attributes) {
+    public function __construct($attributes)
+    {
         parent::__construct($attributes);
         $this->validators = array('validoi_nimi', 'validoi_aloituspaiva');
     }
 
     public static function all()
     {
-        $query = DB::connection()->prepare('SELECT Kurssi.id, aloituspaiva, Kurssi.nimi AS nimi, Kayttaja.kayttajanimi AS vastuuhenkilo FROM Kurssi 
-LEFT JOIN Kurssinvastuu ON Kurssi.id=Kurssinvastuu.kurssi_id
-LEFT JOIN Kayttaja ON Kayttaja.id=Kurssinvastuu.kayttaja_id');
+        $query = DB::connection()->prepare('SELECT Kurssi.id, aloituspaiva, Kurssi.nimi AS nimi FROM Kurssi');
         $query->execute();
         $rows = $query->fetchAll();
         $kurssit = array();
@@ -24,13 +23,11 @@ LEFT JOIN Kayttaja ON Kayttaja.id=Kurssinvastuu.kayttaja_id');
                 'id' => $row['id'],
                 'nimi' => $row['nimi'],
                 'aloituspaiva' => $row['aloituspaiva'],
-                'vastuuhenkilo' => $row['vastuuhenkilo'],
             ));
         }
 
         return $kurssit;
     }
-
 
 
     public static function find($id)
@@ -64,32 +61,36 @@ LEFT JOIN Kayttaja ON Kayttaja.id=Kurssinvastuu.kayttaja_id WHERE Kurssi.id = :i
         $this->id = $row['id'];
     }
 
-    public function tuhoa($id) {
+    public function tuhoa($id)
+    {
         $query = DB::connection()->prepare('DELETE FROM Kurssi WHERE Kurssi.id = :id');
         $query->execute(array('id' => $id));
 
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $query = DB::connection()->prepare('UPDATE Kurssi SET nimi = :nimi, aloituspaiva = :aloituspaiva, 
         kysymys5 = :kysymys5, kysymys6 = :kysymys6
         WHERE Kurssi.id = :id');
         $query->execute(array('id' => $id, 'nimi' => $this->nimi, 'aloituspaiva' => $this->aloituspaiva, 'kysymys5' => $this->kysymys5, 'kysymys6' => $this->kysymys6));
     }
 
-    public function validoi_nimi() {
+    public function validoi_nimi()
+    {
         $errors = array();
         if ($this->nimi == '' || $this->nimi == null) {
             $errors[] = 'Nimi ei voi olla tyhjä';
         }
-        if(strlen($this->nimi) < 3) {
+        if (strlen($this->nimi) < 3) {
             $errors[] = 'Nimen pituuden tulee olla vähintään kolme merkkiä';
         }
 
         return $errors;
     }
 
-    public function validoi_aloituspaiva() {
+    public function validoi_aloituspaiva()
+    {
         $errors = array();
         if ($this->aloituspaiva == '' || $this->aloituspaiva == null) {
             $errors[] = 'Päivämäärä ei saa olla tyhjä';

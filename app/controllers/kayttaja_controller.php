@@ -1,21 +1,25 @@
 <?php
 
-class KayttajaController extends BaseController {
-    public static function login() {
+class KayttajaController extends BaseController
+{
+    public static function login()
+    {
         View::make('kirjaudu.html');
     }
 
-    public static function kirjauduulos(){
+    public static function kirjauduulos()
+    {
         $_SESSION['kayttaja'] = null;
         Redirect::to('/', array('message' => 'Olet kirjautunut ulos!'));
     }
 
-    public static function kasittele_kirjautuminen() {
+    public static function kasittele_kirjautuminen()
+    {
         $params = $_POST;
 
         $kayttaja = Kayttaja::authenticate($params['kayttajanimi'], $params['salasana']);
 
-        if(!$kayttaja) {
+        if (!$kayttaja) {
             View::make('kirjaudu.html', array('error' => 'Väärä käyttäjätunnus tai salasana', 'username' => $params['kayttajanimi']));
         } else {
             $_SESSION['kayttaja'] = $kayttaja->id;
@@ -24,7 +28,8 @@ class KayttajaController extends BaseController {
         }
     }
 
-    public static function naytaKaikki() {
+    public static function naytaKaikki()
+    {
         $kayttajat = Kayttaja::naytaKaikki();
 
 
@@ -32,7 +37,8 @@ class KayttajaController extends BaseController {
 
     }
 
-    public static function tuhoa($id) {
+    public static function tuhoa($id)
+    {
         self::check_logged_in();
         $kayttaja = new Kayttaja(array('id' => $id));
 
@@ -41,13 +47,15 @@ class KayttajaController extends BaseController {
         Redirect::to('/kurssit', array('message' => 'Käyttäjä poistettu!'));
     }
 
-    public static function muokkaus($id) {
+    public static function muokkaus($id)
+    {
         self::check_logged_in();
         $kayttaja = Kayttaja::etsi($id);
         View::make('/yleiset/muokkaus.html', array('attributes' => $kayttaja));
     }
 
-    public static function paivitys($id) {
+    public static function paivitys($id)
+    {
         $params = $_POST;
 
         $attributes = array(
@@ -69,13 +77,15 @@ class KayttajaController extends BaseController {
         }
     }
 
-    public static function luonti() {
+    public static function luonti()
+    {
         self::check_logged_in();
         View::make('/yleiset/uusikayttaja.html');
 
     }
 
-    public static function tallennus(){
+    public static function tallennus()
+    {
         $params = $_POST;
         $attributes = new Kayttaja(array(
             'kayttajanimi' => $params['kayttajanimi'],
@@ -92,6 +102,26 @@ class KayttajaController extends BaseController {
         } else {
             View::make('/yleiset/uusikayttaja.html', array('errors' => $errors, 'attributes' => $attributes));
         }
+    }
+
+    public static function tallenennaVastuu($kayttaja_id, $kurssi_id)
+    {
+
+        Kayttaja::lisaaVastuu($kayttaja_id, $kurssi_id);
+
+
+        Redirect::to('/', array('message' => 'Kayttäjän vastuu lisätty!'));
+
+    }
+
+    public static function poistaVastuu($kayttaja_id, $kurssi_id)
+    {
+
+        Kayttaja::poistaVastuu($kayttaja_id, $kurssi_id);
+
+
+        Redirect::to('/', array('message' => 'Vastuu poistettu!'));
+
     }
 
 }

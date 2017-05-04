@@ -1,14 +1,17 @@
 <?php
 
-class KurssiController extends BaseController {
-    public static function index() {
+class KurssiController extends BaseController
+{
+    public static function index()
+    {
         $kurssit = Kurssi::all();
 
 
         View::make('/kurssit/kurssit.html', array('kurssit' => $kurssit));
     }
 
-    public static function esittely($id) {
+    public static function esittely($id)
+    {
         self::check_logged_in();
         $kurssi = Kurssi::find($id);
 
@@ -23,7 +26,6 @@ class KurssiController extends BaseController {
         $vastuut = Kayttaja::naytaKaikkiKurssinVastuut($id);
 
 
-
         View::make('/kurssit/esittely.html', array('kurssi' => $kurssi,
             'arvostelu' => $arvostelu, 'arvostelu2' => $arvostelu2,
             'arvostelu3' => $arvostelu3, 'arvostelu4' => $arvostelu4,
@@ -31,13 +33,15 @@ class KurssiController extends BaseController {
 
     }
 
-    public static function luonti() {
+    public static function luonti()
+    {
         self::check_logged_in();
         View::make('/kurssit/uusikurssi.html');
 
     }
 
-    public static function tallennus(){
+    public static function tallennus()
+    {
         $params = $_POST;
         $attributes = new Kurssi(array(
             'nimi' => $params['nimi'],
@@ -57,14 +61,23 @@ class KurssiController extends BaseController {
         }
     }
 
-    public static function muokkaus($id) {
+    public static function muokkaus($id)
+    {
         self::check_logged_in();
+
+        if (Kayttaja::naytaKaikkiKurssinVastuut($id) == null) {
+
+        } elseif (self::get_check_permission($id) == null) {
+            Redirect::to('/kurssit/' . $id, array('message' => 'Sinulla ei ole oikeuksia muokata kurssia!'));
+        }
         $kurssi = Kurssi::find($id);
-        $kayttajat = Kayttaja::naytaKaikki();
-        View::make('/kurssit/muokkaus.html', array('attributes' => $kurssi, 'kayttajat' => $kayttajat));
+        $kayttajat = Kayttaja::naytaKaikkiVapaat($id);
+        $vastuut = Kayttaja::naytaKaikkiKurssinVastuut($id);
+        View::make('/kurssit/muokkaus.html', array('attributes' => $kurssi, 'kayttajat' => $kayttajat, 'vastuut' => $vastuut));
     }
 
-    public static function paivitys($id) {
+    public static function paivitys($id)
+    {
         $params = $_POST;
 
         $attributes = array(
@@ -87,8 +100,12 @@ class KurssiController extends BaseController {
         }
     }
 
-    public static function tuhoa($id) {
+    public static function tuhoa($id)
+    {
         self::check_logged_in();
+        if (self::get_check_permission($id) == null) {
+            Redirect::to('/kurssit/' . $id, array('message' => 'Sinulla ei ole oikeuksia poistaa kurssia!'));
+        }
         $kurssi = new Kurssi(array('id' => $id));
 
         $kurssi->tuhoa($id);

@@ -1,5 +1,6 @@
 <?php
 
+
 $routes->get('/', function () {
     HelloWorldController::index();
 });
@@ -41,6 +42,7 @@ $routes->get('/uusikayttaja', function(){
 });
 
 $routes->get('/kurssit/:id/edit', function ($id) {
+
     KurssiController::muokkaus($id);
 });
 
@@ -86,4 +88,12 @@ $routes->post('/kirjauduulos', function(){
 
 $routes->get('/kayttajat', function(){
     KayttajaController::naytaKaikki();
+});
+
+$routes->get('/vastuut/:kayttaja_id/:kurssi_id/lisaa', function($kayttaja_id, $kurssi_id){
+   KayttajaController::tallenennaVastuu($kayttaja_id, $kurssi_id);
+});
+
+$routes->get('/vastuut/:kayttaja_id/:kurssi_id/poista', function($kayttaja_id, $kurssi_id){
+    KayttajaController::poistaVastuu($kayttaja_id, $kurssi_id);
 });
