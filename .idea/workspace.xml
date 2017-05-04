@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f13471d-7f25-4a1c-a811-5dce309254d5" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/yleiset/base.html" afterPath="$PROJECT_DIR$/app/views/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Tsoha-Bootstrap.iml" afterPath="$PROJECT_DIR$/.idea/Tsoha-Bootstrap.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/hello_world_controller.php" afterPath="$PROJECT_DIR$/app/controllers/hello_world_controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/kayttaja_controller.php" afterPath="$PROJECT_DIR$/app/controllers/kayttaja_controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/kurssit_controller.php" afterPath="$PROJECT_DIR$/app/controllers/kurssit_controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/kayttaja.php" afterPath="$PROJECT_DIR$/app/models/kayttaja.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/kurssi.php" afterPath="$PROJECT_DIR$/app/models/kurssi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/kurssit/esittely.html" afterPath="$PROJECT_DIR$/app/views/kurssit/esittely.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/kurssit/kurssit.html" afterPath="$PROJECT_DIR$/app/views/kurssit/kurssit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/kurssit/muokkaus.html" afterPath="$PROJECT_DIR$/app/views/kurssit/muokkaus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/kurssit/uusikurssi.html" afterPath="$PROJECT_DIR$/app/views/kurssit/uusikurssi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/add_test_data.sql" afterPath="$PROJECT_DIR$/sql/add_test_data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/create_tables.sql" afterPath="$PROJECT_DIR$/sql/create_tables.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/drop_tables.sql" afterPath="$PROJECT_DIR$/sql/drop_tables.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +30,6 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
@@ -24,57 +38,38 @@
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="TietokantaSovellusPHP" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="arvostelu.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/arvostelu/arvostelu.html">
+      <file leaf-file-name="kayttaja.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/kayttaja.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="76" column="47" lean-forward="false" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="-1278">
+              <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding>
+                <marker date="1493902859309" expanded="true" signature="383:473" ph="SELECT * FRO... Kayttaja" />
+                <marker date="1493902859309" expanded="true" signature="994:1040" ph="SELECT * FRO... Kayttaja" />
+                <marker date="1493902859309" expanded="true" signature="1549:1571" ph="SELECT * FRO... Kayttaja" />
+                <marker date="1493902859309" expanded="true" signature="2059:2232" ph="SELECT * FRO... Kayttaja" />
+                <marker date="1493902859309" expanded="true" signature="2718:2762" ph="DELETE FROM " />
+                <marker date="1493902859309" expanded="true" signature="2895:3038" ph="UPDATE Kaytt... " />
+                <marker date="1493902859309" expanded="true" signature="3278:3380" ph="INSERT INTO Kayttaja... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_test_data.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/add_test_data.sql">
+      <file leaf-file-name="kurssi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/kurssi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kurssit_controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/kurssit_controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arvostelu_controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/arvostelu_controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_tables.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/create_tables.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="83">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="98" selection-end-column="5" />
+              <folding>
+                <marker date="1493902205676" expanded="true" signature="372:597" ph="SELECT Kurss... Kurssi" />
+                <marker date="1493902205676" expanded="true" signature="1108:1403" ph="SELECT Kurss... Kurssi" />
+                <marker date="1493902205676" expanded="true" signature="1934:2058" ph="INSERT INTO Kurssi... " />
+                <marker date="1493902205676" expanded="true" signature="2366:2406" ph="DELETE FROM " />
+                <marker date="1493902205676" expanded="true" signature="2539:2682" ph="UPDATE Kurss... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,30 +97,36 @@
         <option value="$PROJECT_DIR$/app/models/Kurssi.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/views/uusikurssi.html" />
-        <option value="$PROJECT_DIR$/app/controllers/hello_world_controller.php" />
         <option value="$PROJECT_DIR$/lib/base_model.php" />
         <option value="$PROJECT_DIR$/app/views/muokkaus.html" />
         <option value="$PROJECT_DIR$/app/views/login.html" />
-        <option value="$PROJECT_DIR$/sql/drop_tables.sql" />
-        <option value="$PROJECT_DIR$/sql/add_test_data.sql" />
         <option value="$PROJECT_DIR$/app/controllers/user_controller.php" />
-        <option value="$PROJECT_DIR$/app/models/kayttaja.php" />
+        <option value="$PROJECT_DIR$/app/views/home.html" />
         <option value="$PROJECT_DIR$/app/views/kirjaudu.html" />
         <option value="$PROJECT_DIR$/lib/base_controller.php" />
         <option value="$PROJECT_DIR$/app/views/kurssit.html" />
-        <option value="$PROJECT_DIR$/app/controllers/kayttaja_controller.php" />
-        <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/base.html" />
-        <option value="$PROJECT_DIR$/app/models/kurssi.php" />
-        <option value="$PROJECT_DIR$/sql/create_tables.sql" />
         <option value="$PROJECT_DIR$/app/views/arvostelu.html" />
-        <option value="$PROJECT_DIR$/app/views/home.html" />
         <option value="$PROJECT_DIR$/app/views/esittely.html" />
+        <option value="$PROJECT_DIR$/app/controllers/arvostelu_controller.php" />
         <option value="$PROJECT_DIR$/app/models/arvostelu.php" />
+        <option value="$PROJECT_DIR$/sql/create_tables.sql" />
+        <option value="$PROJECT_DIR$/sql/drop_tables.sql" />
+        <option value="$PROJECT_DIR$/sql/add_test_data.sql" />
+        <option value="$PROJECT_DIR$/app/views/kurssit/muokkaus.html" />
+        <option value="$PROJECT_DIR$/app/views/yleiset/base.html" />
+        <option value="$PROJECT_DIR$/app/controllers/hello_world_controller.php" />
+        <option value="$PROJECT_DIR$/app/views/yleiset/kayttajat.html" />
+        <option value="$PROJECT_DIR$/app/views/yleiset/muokkaus.html" />
+        <option value="$PROJECT_DIR$/app/views/kurssit/uusikurssi.html" />
+        <option value="$PROJECT_DIR$/app/controllers/kayttaja_controller.php" />
+        <option value="$PROJECT_DIR$/app/views/base.html" />
+        <option value="$PROJECT_DIR$/config/routes.php" />
+        <option value="$PROJECT_DIR$/app/views/yleiset/uusikayttaja.html" />
+        <option value="$PROJECT_DIR$/app/views/kurssit/kurssit.html" />
+        <option value="$PROJECT_DIR$/app/models/kurssi.php" />
         <option value="$PROJECT_DIR$/app/controllers/kurssit_controller.php" />
         <option value="$PROJECT_DIR$/app/views/kurssit/esittely.html" />
-        <option value="$PROJECT_DIR$/app/controllers/arvostelu_controller.php" />
-        <option value="$PROJECT_DIR$/app/views/arvostelu/arvostelu.html" />
+        <option value="$PROJECT_DIR$/app/models/kayttaja.php" />
       </list>
     </option>
   </component>
@@ -140,9 +141,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="983" />
+    <option name="width" value="1366" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -231,20 +231,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TietokantaSovellusPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TietokantaSovellusPHP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -278,6 +264,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TietokantaSovellusPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TietokantaSovellusPHP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,12 +415,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -423,14 +431,10 @@
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/views/yleiset" />
-      <recent name="$PROJECT_DIR$/app/views/kurssit" />
-      <recent name="$PROJECT_DIR$/app/views/kirjautuminen" />
-      <recent name="$PROJECT_DIR$/app/views/arvostelu" />
+      <recent name="$PROJECT_DIR$/app/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -449,24 +453,24 @@
     <configuration default="true" type="AppEnginePhpConfigurationType" factoryName="App Engine for PHP">
       <method />
     </configuration>
-    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
       <method />
     </configuration>
     <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
       <method />
     </configuration>
     <configuration default="true" type="FirefoxRemoteDebugType" factoryName="Firefox Remote">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -530,7 +534,6 @@
     <configuration default="true" type="ReactNative" factoryName="React Native">
       <node-interpreter value="project" />
       <platform value="ANDROID" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="XSLT" factoryName="XSLT">
@@ -617,56 +620,38 @@
       <workItem from="1491828550327" duration="8478000" />
       <workItem from="1491845968090" duration="4136000" />
       <workItem from="1491863508964" duration="4260000" />
-      <workItem from="1492606235754" duration="8091000" />
-      <workItem from="1492708408176" duration="1303000" />
-      <workItem from="1492733445114" duration="4365000" />
-      <workItem from="1492737850390" duration="217000" />
-      <workItem from="1492775270276" duration="194000" />
-      <workItem from="1492779677473" duration="6293000" />
-      <workItem from="1492796944905" duration="118000" />
-      <workItem from="1492806085908" duration="980000" />
-      <workItem from="1492885057541" duration="14000" />
-      <workItem from="1493212356776" duration="248000" />
-      <workItem from="1493219914153" duration="125000" />
-      <workItem from="1493296853622" duration="1288000" />
-      <workItem from="1493307929720" duration="1879000" />
-      <workItem from="1493318819940" duration="939000" />
-      <workItem from="1493364165649" duration="105000" />
+      <workItem from="1493381902687" duration="396000" />
+      <workItem from="1493811684155" duration="647000" />
+      <workItem from="1493812347389" duration="1028000" />
+      <workItem from="1493813574129" duration="1612000" />
+      <workItem from="1493831857504" duration="7440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105611000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="90575000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="983" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="743" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2571885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23712121" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32746115" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21099888" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44927537" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32746115" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -677,8 +662,8 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17577706" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21824974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14814815" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23712121" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -719,99 +704,239 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/arvostelu/arvostelu.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/hello_world_controller.php" />
+    <entry file="file://$PROJECT_DIR$/assets/css/site.css" />
+    <entry file="file://$PROJECT_DIR$/app/models/hello_world.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/home.html" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/hello_world_controller.php" />
+    <entry file="file://$PROJECT_DIR$/app/models/hello_world.php" />
+    <entry file="file://$PROJECT_DIR$/assets/css/site.css" />
+    <entry file="file://$PROJECT_DIR$/index.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/index.html" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08c24d22-81f3-4cb0-a254-a0cdac24cbd2/console.sql" />
+    <entry file="file://$PROJECT_DIR$/composer.json" />
+    <entry file="file://$PROJECT_DIR$/create_tables.sh" />
+    <entry file="file://$PROJECT_DIR$/drop_tables.sh" />
+    <entry file="file://$PROJECT_DIR$/deploy.sh" />
+    <entry file="file://$PROJECT_DIR$/app/views/uusikurssi.html" />
+    <entry file="file://$PROJECT_DIR$/app/models/hello_world.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/helloworld.html" />
+    <entry file="file://$PROJECT_DIR$/lib/database.php" />
+    <entry file="file://$PROJECT_DIR$/lib/base_model.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/home.html" />
+    <entry file="file://$PROJECT_DIR$/lib/base_controller.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/kirjaudu.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/muokkaus.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/kurssit.html" />
+    <entry file="file://$PROJECT_DIR$/assets/js/site.js" />
+    <entry file="file://$PROJECT_DIR$/app/views/esittely.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/base.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/arvostelu.html" />
+    <entry file="file://$PROJECT_DIR$/assets/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4590">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19866">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/kirjautuminen/kirjaudu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/drop_tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sql/add_test_data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/kurssit_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/arvostelu_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="108">
+          <caret line="6" column="71" lean-forward="true" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sql/create_tables.sql">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/arvostelu_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/kurssit/muokkaus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/yleiset/kayttajat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/yleiset/muokkaus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/hello_world_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/kurssit/uusikurssi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/kayttaja_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="89" column="34" lean-forward="false" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/yleiset/uusikayttaja.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/kurssit/kurssit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/kurssit_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="29" column="91" lean-forward="false" selection-start-line="29" selection-start-column="91" selection-end-line="29" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/kurssit/esittely.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/arvostelu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" column="34" lean-forward="false" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493309464000" expanded="true" signature="303:473" ph="INSERT INTO Vastaus... " />
-            <marker date="1493309464000" expanded="true" signature="872:976" ph="SELECT Vasta... Vastaus" />
-            <marker date="1493309464000" expanded="true" signature="1063:1167" ph="SELECT Vasta... Vastaus" />
-            <marker date="1493309464000" expanded="true" signature="1254:1358" ph="SELECT Vasta... Vastaus" />
-            <marker date="1493309464000" expanded="true" signature="1427:1531" ph="SELECT Vasta... Vastaus" />
-            <marker date="1493309464000" expanded="true" signature="2890:2951" ph="SELECT vasta... Vastaus" />
-            <marker date="1493309464000" expanded="true" signature="3020:3081" ph="SELECT vasta... Vastaus" />
+            <marker date="1493812318575" expanded="true" signature="303:473" ph="INSERT INTO Vastaus... " />
+            <marker date="1493812318575" expanded="true" signature="872:976" ph="SELECT Vasta... Vastaus" />
+            <marker date="1493812318575" expanded="true" signature="1063:1167" ph="SELECT Vasta... Vastaus" />
+            <marker date="1493812318575" expanded="true" signature="1254:1358" ph="SELECT Vasta... Vastaus" />
+            <marker date="1493812318575" expanded="true" signature="1427:1531" ph="SELECT Vasta... Vastaus" />
+            <marker date="1493812318575" expanded="true" signature="2890:2951" ph="SELECT vasta... Vastaus" />
+            <marker date="1493812318575" expanded="true" signature="3020:3081" ph="SELECT vasta... Vastaus" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/create_tables.sql">
+    <entry file="file://$PROJECT_DIR$/app/models/kurssi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="83">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="98" selection-end-column="5" />
+          <folding>
+            <marker date="1493902205676" expanded="true" signature="372:597" ph="SELECT Kurss... Kurssi" />
+            <marker date="1493902205676" expanded="true" signature="1108:1403" ph="SELECT Kurss... Kurssi" />
+            <marker date="1493902205676" expanded="true" signature="1934:2058" ph="INSERT INTO Kurssi... " />
+            <marker date="1493902205676" expanded="true" signature="2366:2406" ph="DELETE FROM " />
+            <marker date="1493902205676" expanded="true" signature="2539:2682" ph="UPDATE Kurss... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/kurssit_controller.php">
+    <entry file="file://$PROJECT_DIR$/app/models/kayttaja.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/arvostelu_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/add_test_data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/arvostelu/arvostelu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="76" column="47" lean-forward="false" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="-1278">
+          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <marker date="1493902859309" expanded="true" signature="383:473" ph="SELECT * FRO... Kayttaja" />
+            <marker date="1493902859309" expanded="true" signature="994:1040" ph="SELECT * FRO... Kayttaja" />
+            <marker date="1493902859309" expanded="true" signature="1549:1571" ph="SELECT * FRO... Kayttaja" />
+            <marker date="1493902859309" expanded="true" signature="2059:2232" ph="SELECT * FRO... Kayttaja" />
+            <marker date="1493902859309" expanded="true" signature="2718:2762" ph="DELETE FROM " />
+            <marker date="1493902859309" expanded="true" signature="2895:3038" ph="UPDATE Kaytt... " />
+            <marker date="1493902859309" expanded="true" signature="3278:3380" ph="INSERT INTO Kayttaja... " />
+          </folding>
         </state>
       </provider>
     </entry>

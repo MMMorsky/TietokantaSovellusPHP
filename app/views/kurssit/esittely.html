@@ -4,10 +4,15 @@
     {{message}}
 </div>
 <h2>{{kurssi.nimi}}</h2>
+<h4>Kurssin vastuuhenkilöt</h4>
+<tr>
+{% for kayttaja in vastuut %}
+    <td>{{kayttaja.oikeanimi}}</td>
+{% endfor %}
+</tr>
 
 
-
-    <h5><strong>Päivämäärä: </strong> {{kurssi.aloituspaiva}}</h5>
+    <h5>Päivämäärä: {{kurssi.aloituspaiva}}</h5>
 
 
     <script type="text/javascript">

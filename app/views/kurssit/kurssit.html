@@ -13,7 +13,6 @@
     <tr>
         <th>Kurssi</th>
         <th>Päivämäärä</th>
-        <th>Vastuuhenkilö</th>
     </tr>
     </thead>
 
@@ -26,7 +25,6 @@
             <td><a href="{{base_path}}/arvostelu/{{kurssi.id}}">{{kurssi.nimi}}</a></td>
             {% endif %}
             <td>{{kurssi.aloituspaiva}}</td>
-            <td>{{kurssi.vastuuhenkilo}}</td>
         </tr>
     {% endfor %}
     </tbody>

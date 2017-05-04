@@ -28,12 +28,28 @@ $routes->get('/uusikurssi', function(){
     KurssiController::luonti();
 });
 
-$routes->post('/esittely', function(){
+$routes->post('/tallennakurssi', function(){
     KurssiController::tallennus();
+});
+
+$routes->post('/tallennakayttaja', function(){
+KayttajaController::tallennus();
+});
+
+$routes->get('/uusikayttaja', function(){
+    KayttajaController::luonti();
 });
 
 $routes->get('/kurssit/:id/edit', function ($id) {
     KurssiController::muokkaus($id);
+});
+
+$routes->get('/kayttajat/:id/edit', function ($id) {
+    KayttajaController::muokkaus($id);
+});
+
+$routes->post('/kayttajat/:id/edit', function ($id)  {
+   KayttajaController::paivitys($id);
 });
 
 $routes->post('/kurssit/:id/edit', function ($id)  {
@@ -42,6 +58,10 @@ $routes->post('/kurssit/:id/edit', function ($id)  {
 
 $routes->post('/kurssit/:id/tuhoa', function ($id) {
     KurssiController::tuhoa($id);
+});
+
+$routes->post('/kayttajat/:id/tuhoa', function ($id) {
+    KayttajaController::tuhoa($id);
 });
 
 $routes->get('/kirjaudu', function () {
@@ -62,4 +82,8 @@ $routes->post('/arvostelu/:id', function ($id) {
 
 $routes->post('/kirjauduulos', function(){
     KayttajaController::kirjauduulos();
+});
+
+$routes->get('/kayttajat', function(){
+    KayttajaController::naytaKaikki();
 });

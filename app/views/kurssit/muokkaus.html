@@ -35,7 +35,18 @@
     </div>
 
     <div class="form-group">
+        <label>Vastuuhenkilö</label>
+        <select class="form-control" name="kayttajat[]" multiple="">
+            {% for kayttaja in kayttajat %}
+            <option value="{{category.id}}">{{kayttaja.oikeanimi}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
         <button type="submit" class="btn btn-primary">Muokkaa</button>
     </div>
+
+
 </form>
 {% endblock %}

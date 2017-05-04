@@ -1,8 +1,3 @@
-CREATE TABLE Vastuuhenkilo  (
-  id SERIAL PRIMARY KEY,
-  nimi VARCHAR(50) NOT NULL
-);
-
 
 CREATE TABLE Kurssi (
   id SERIAL PRIMARY KEY,
@@ -12,16 +7,16 @@ CREATE TABLE Kurssi (
   kysymys6 VARCHAR(200)
 );
 
-
-CREATE TABLE Kurssinvastuu (
-  vastuuhenkilo_id INTEGER REFERENCES Vastuuhenkilo(id) ON UPDATE CASCADE ON DELETE CASCADE,
-  kurssi_id INTEGER REFERENCES Kurssi(id) ON UPDATE CASCADE
-);
-
 CREATE TABLE Kayttaja (
   id SERIAL PRIMARY KEY,
   kayttajanimi VARCHAR(50),
+  oikeanimi VARCHAR(50),
   salasana VARCHAR(50)
+);
+
+CREATE TABLE Kurssinvastuu (
+  kayttaja_id INTEGER REFERENCES Kayttaja(id) ON UPDATE CASCADE ON DELETE CASCADE,
+  kurssi_id INTEGER REFERENCES Kurssi(id) ON UPDATE CASCADE
 );
 
 

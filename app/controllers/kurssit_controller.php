@@ -5,7 +5,7 @@ class KurssiController extends BaseController {
         $kurssit = Kurssi::all();
 
 
-        View::make('kurssit.html', array('kurssit' => $kurssit));
+        View::make('/kurssit/kurssit.html', array('kurssit' => $kurssit));
     }
 
     public static function esittely($id) {
@@ -20,18 +20,20 @@ class KurssiController extends BaseController {
         $arvostelu5 = Arvostelu::annatekstivastaukset($id, 5);
         $arvostelu6 = Arvostelu::annatekstivastaukset($id, 6);
 
+        $vastuut = Kayttaja::naytaKaikkiKurssinVastuut($id);
+
 
 
         View::make('/kurssit/esittely.html', array('kurssi' => $kurssi,
             'arvostelu' => $arvostelu, 'arvostelu2' => $arvostelu2,
             'arvostelu3' => $arvostelu3, 'arvostelu4' => $arvostelu4,
-            'arvostelu5' => $arvostelu5, 'arvostelu6' => $arvostelu6));
+            'arvostelu5' => $arvostelu5, 'arvostelu6' => $arvostelu6, 'vastuut' => $vastuut));
 
     }
 
     public static function luonti() {
         self::check_logged_in();
-        View::make('uusikurssi.html');
+        View::make('/kurssit/uusikurssi.html');
 
     }
 
@@ -51,14 +53,15 @@ class KurssiController extends BaseController {
             $kurssi->save();
             Redirect::to('/kurssit/' . $kurssi->id, array('message' => 'Kurssi lisätty!'));
         } else {
-            View::make('uusikurssi.html', array('errors' => $errors, 'attributes' => $attributes));
+            View::make('/kurssit/uusikurssi.html', array('errors' => $errors, 'attributes' => $attributes));
         }
     }
 
     public static function muokkaus($id) {
         self::check_logged_in();
         $kurssi = Kurssi::find($id);
-        View::make('muokkaus.html', array('attributes' => $kurssi));
+        $kayttajat = Kayttaja::naytaKaikki();
+        View::make('/kurssit/muokkaus.html', array('attributes' => $kurssi, 'kayttajat' => $kayttajat));
     }
 
     public static function paivitys($id) {
@@ -76,7 +79,7 @@ class KurssiController extends BaseController {
         $errors = $kurssi->errors();
 
         if (count($errors) > 0) {
-            View::make('muokkaus.html', array('errors' => $errors, 'attributes' => $attributes));
+            View::make('/kurssit/muokkaus.html', array('errors' => $errors, 'attributes' => $attributes));
         } else {
             $kurssi->edit($id);
 

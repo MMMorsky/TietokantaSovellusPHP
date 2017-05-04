@@ -12,9 +12,9 @@ class Kurssi extends BaseModel
 
     public static function all()
     {
-        $query = DB::connection()->prepare('SELECT Kurssi.id, aloituspaiva, Kurssi.nimi AS nimi, Vastuuhenkilo.nimi AS vastuuhenkilo FROM Kurssi 
+        $query = DB::connection()->prepare('SELECT Kurssi.id, aloituspaiva, Kurssi.nimi AS nimi, Kayttaja.kayttajanimi AS vastuuhenkilo FROM Kurssi 
 LEFT JOIN Kurssinvastuu ON Kurssi.id=Kurssinvastuu.kurssi_id
-LEFT JOIN Vastuuhenkilo ON Vastuuhenkilo.id=Kurssinvastuu.vastuuhenkilo_id');
+LEFT JOIN Kayttaja ON Kayttaja.id=Kurssinvastuu.kayttaja_id');
         $query->execute();
         $rows = $query->fetchAll();
         $kurssit = array();
@@ -31,11 +31,13 @@ LEFT JOIN Vastuuhenkilo ON Vastuuhenkilo.id=Kurssinvastuu.vastuuhenkilo_id');
         return $kurssit;
     }
 
+
+
     public static function find($id)
     {
-        $query = DB::connection()->prepare('SELECT Kurssi.id AS id, aloituspaiva, Kurssi.nimi AS nimi, Vastuuhenkilo.nimi AS vastuuhenkilo, Kurssi.kysymys5, Kurssi.kysymys6 FROM Kurssi 
+        $query = DB::connection()->prepare('SELECT Kurssi.id AS id, aloituspaiva, Kurssi.nimi AS nimi, Kayttaja.kayttajanimi AS vastuuhenkilo, Kurssi.kysymys5, Kurssi.kysymys6 FROM Kurssi 
 LEFT JOIN Kurssinvastuu ON Kurssi.id=Kurssinvastuu.kurssi_id
-LEFT JOIN Vastuuhenkilo ON Vastuuhenkilo.id=Kurssinvastuu.vastuuhenkilo_id WHERE Kurssi.id = :id LIMIT 1');
+LEFT JOIN Kayttaja ON Kayttaja.id=Kurssinvastuu.kayttaja_id WHERE Kurssi.id = :id LIMIT 1');
         $query->execute(array('id' => $id));
         $row = $query->fetch();
 
